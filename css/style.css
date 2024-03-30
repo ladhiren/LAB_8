@@ -1,0 +1,128 @@
+header img {
+    background-color:lightcyan ;
+    float: left;
+    width: 120px;
+    height: 100px;
+}
+
+header {
+    background-color: lightcyan;
+    text-align: center;
+    font-size: 30px;
+    height: 100px;
+    overflow: auto;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 120px auto 400px;
+}
+
+#container #navbar {
+    background-color: lightskyblue;
+    width: 120px;
+    height: 470px;
+    text-align: left;
+}
+
+#container #navbar ul li {
+    list-style: none;
+    padding: 7px;
+    display: block;
+    border-bottom: 1px solid white;
+    background-color: palevioletred;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h3 {
+    color: lightskyblue;
+}
+
+main {
+    
+    padding: 0 10px;
+}
+
+#container img {
+    width: 400px;
+    height: 250px;
+}
+
+footer {
+    background-color: lightcyan;
+    height: 30px;
+    font-size: 10px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#navbar ul {
+    padding: 0;
+}
+
+body {
+    border: 6px solid darkblue;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #container #navbar {
+        background-color: lightskyblue;
+        width: auto;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    #container #navbar ul li {
+        list-style: none;
+        padding: 7px;
+        margin: 0 5px;
+        display: inline-block;
+        border-bottom: 1px solid white;
+        background-color: palevioletred;
+    }
+    
+
+    main {
+        
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    #container #navbar {
+        background-color: lightskyblue;
+        width: auto;
+        padding: 0;
+        text-align: left;
+    }
+
+    #container #navbar ul li {
+        list-style: none;
+        display: block;
+        border-bottom: 1px solid white;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    main {
+        
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    #container img {
+        display: none;
+    }
+}
